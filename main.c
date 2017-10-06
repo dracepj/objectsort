@@ -10,11 +10,11 @@ char view;
 int Threshold[NUM_RANGE_STEPS] = {1100, 650, 400, 270, 200, 0};
 
 const int Colors[NUM_RANGE_STEPS][3] = {{ 1, 1, 1}, // white
-																	{ 1, 0, 1}, // magenta
-																	{ 1, 0, 0}, // red
-																	{ 1, 1, 0}, // yellow
-																	{ 0, 0, 1}, // blue
-																	{ 0, 1, 0}};// green
+				        { 1, 0, 1}, // magenta
+					{ 1, 0, 0}, // red
+					{ 1, 1, 0}, // yellow
+					{ 0, 0, 1}, // blue
+					{ 0, 1, 0}};// green
 																	 
 
 void Init_ADC(void) {
@@ -185,11 +185,6 @@ unsigned controlIR(void){
 	
 }
 
-void LED_on(){
-		
-}
-
-
 int main(void)
 {
 //	unsigned on_brightness=0, off_brightness=0;
@@ -206,10 +201,9 @@ int main(void)
 	int boundary = 0;	
 	
 	
-	boundary = 0.8 * (controlIR() + controlIR())/2;
-			//ir threshhold
+	boundary = 0.8 * (controlIR() + controlIR())/2; //ir threshhold
 	static int avg_diff = 0;
-	//int backCount = 0;		//count how long backward
+					//count how long backward
 	int boundaryResetCount = 0;  
 	int j = 0;
 	
